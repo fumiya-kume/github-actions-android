@@ -16,6 +16,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    
     - name: Build with Gradle
       run: ./gradlew test
+  install_missing_sdk:
+    runs-on: ubuntu-latest
+    steps:
+    - name: list_sdk
+      run: sdkmanager --list
